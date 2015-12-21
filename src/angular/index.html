@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="App">
+  <head>
+
+    <title>Nodal Angular SPA</title>
+
+    <base href="/">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <meta name="robots" content="noindex, nofollow, noarchive">
+
+    <!-- external vendor -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-animate.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+    <!-- internal vendor -->
+
+    <link rel="stylesheet" src="/static/compiled/vendor/style/sample.css">
+    <script src="/static/compiled/vendor/script/sample.js"></script>
+
+    <!-- internal -->
+
+    <link rel="stylesheet" href="/static/compiled/style.css">
+    <script href="/static/compiled/app.js"></script>
+
+  </head>
+
+  <body>
+    <div ui-view></div>
+  </body>
+
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "nodal-angular",
+  "version": "0.0.1",
+  "description": "Angular SPA tools for Nodal",
+  "author": "Keith Horwood",
+  "main": "core/module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodal",
+    "angular",
+    "spa"
+  ],
+  "dependencies": {
+    "colors": "^1.1.2",
+    "fs-extra": "^0.26.3",
+    "i": "^0.3.3",
+    "node-sass": "^3.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keithwhor/nodal-angular.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keithwhor/nodal-angular/issues"
+  },
+  "bin": {
+    "nodal-angular": "cli/cli.js"
+  }
+}
