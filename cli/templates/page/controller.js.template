@@ -1,0 +1,5 @@
+app.controller('{{= it.controllerName }}', ['$scope', function($scope) {
+
+  // Controller Code
+
+}]);

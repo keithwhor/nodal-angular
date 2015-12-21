@@ -1,6 +1,6 @@
 {
   "name": "nodal-angular",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular SPA tools for Nodal",
   "author": "Keith Horwood",
   "main": "core/module.js",
@@ -14,6 +14,7 @@
   ],
   "dependencies": {
     "colors": "^1.1.2",
+    "dot": "^1.0.3",
     "fs-extra": "^0.26.3",
     "i": "^0.3.3",
     "node-sass": "^3.4.2"

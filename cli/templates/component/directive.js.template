@@ -1,0 +1,7 @@
+app.directive('{{= it.componentName }}', function() {
+
+  return {
+    templateUrl: 'components/{{= it.componentNameDash }}/template.html'
+  };
+
+});

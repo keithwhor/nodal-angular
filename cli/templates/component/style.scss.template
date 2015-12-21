@@ -1,0 +1,5 @@
+{{= it.componentNameDash }} {
+
+  color: #000000;
+
+}
