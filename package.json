@@ -1,6 +1,6 @@
 {
   "name": "nodal-angular",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular SPA tools for Nodal",
   "author": "Keith Horwood",
   "main": "core/module.js",

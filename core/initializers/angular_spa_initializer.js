@@ -3,7 +3,7 @@ module.exports = (function() {
   'use strict';
 
   const Nodal = require('nodal');
-  
+
   const fs = require('fs-extra');
   const sass = require('node-sass');
 

@@ -1,4 +1,4 @@
-app.controller('{{= it.controllerName }}', ['$scope', function($scope) {
+app.controller('{{= it.controllerName }}', ['$scope', 'API', function($scope, API) {
 
   // Controller Code
 

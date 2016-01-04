@@ -1,5 +1,5 @@
 {{= it.componentNameDash }} {
 
-  color: #000000;
+  /* style your components here */
 
 }
