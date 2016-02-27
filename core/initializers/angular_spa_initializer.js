@@ -2,40 +2,23 @@ module.exports = (function() {
 
   'use strict';
 
-  const Nodal = require('nodal');
-
   const fs = require('fs-extra');
   const sass = require('node-sass');
 
   class AngularSPAInitializer {
 
-    exec(app, callback) {
-
-      let paths = {
-        script: 'compiled/app.js',
-        css: 'compiled/style.css',
-        vendor: 'compiled/vendor'
-      };
+    exec(callback) {
 
       // Compile JavaScript, with minify flag
-      let script = this.compileJavaScript(Nodal.my.Config.env === 'production');
-      fs.outputFileSync(`static/${paths.script}`, script);
+      let script = this.compileJavaScript(process.env.NODE_ENV === 'production');
+      fs.outputFileSync(`static/${this.constructor.PATHS.script}`, script);
 
       // Compile css
       let css = this.compileCSS();
-      fs.outputFileSync(`static/${paths.css}`, css);
+      fs.outputFileSync(`static/${this.constructor.PATHS.css}`, css);
 
       // Copy all vendor references
-      fs.copySync('angular/vendor', `static/${paths.vendor}`);
-
-      // Compile templates
-      let html = this.compileHTML(paths.script);
-
-      // Set SPA function
-      app.angularSPA = (globals) => {
-        globals = globals && typeof globals === 'object' ? globals : {};
-        return `<script>window.globals=${JSON.stringify(globals)};</script>${html}`;
-      };
+      fs.copySync('angular/vendor', `static/${this.constructor.PATHS.vendor}`);
 
       callback(null);
 
@@ -160,8 +143,13 @@ module.exports = (function() {
 
     }
 
-
   }
+
+  AngularSPAInitializer.PATHS = {
+    script: 'compiled/app.js',
+    css: 'compiled/style.css',
+    vendor: 'compiled/vendor'
+  };
 
   return AngularSPAInitializer;
 
